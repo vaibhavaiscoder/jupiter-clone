@@ -8,6 +8,7 @@ import 'package:jupiter/consts/colors.dart';
 import 'package:jupiter/pages/auth/auth_controller.dart';
 import 'package:jupiter/routes/app_pages.dart';
 import 'package:local_auth/local_auth.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 void main() async{
   await GetStorage.init();
@@ -88,16 +89,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.primaryColor, // Set the background color to orange
-      body: Center(
-        child: Text(
-          'Jupiter',
-          style: TextStyle(
-            fontSize: 48, // Adjust the font size as needed
-            fontWeight: FontWeight.bold,
-            color: Colors.white, // Text color
-          ),
-        ),
-      ),
+      body: 'Jupiter'.text.size(48).bold.white.makeCentered(),
     );
   }
 }

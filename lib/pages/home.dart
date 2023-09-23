@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:jupiter/consts/colors.dart';
 import 'package:jupiter/pages/help_screen/help_screen.dart';
 import 'package:jupiter/pages/home_screen/home_screen.dart';
@@ -46,8 +47,9 @@ class _HomeState extends State<Home> {
         });
       },
       items: [
-        BottomNavigationBarItem(
-          icon: (pageIndex == 0)? Icon(Icons.circle_rounded,color: AppColors.primaryColor,) : Icon(Icons.circle_outlined,color: Colors.grey,),
+        BottomNavigationBarItem(icon: (pageIndex == 0) ?
+        SvgPicture.asset('assets/icons/home-active.svg',color: AppColors.primaryColor,) : SvgPicture.asset('assets/icons/home.svg',color: Colors.grey,),
+
           label: 'Home',
         ),
         BottomNavigationBarItem(
